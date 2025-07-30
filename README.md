@@ -8,7 +8,7 @@ A responsive project gallery built using **HTML**, **CSS**, and **JavaScript** t
 
 ## 📸 Live Preview
 
-[🔗 View Live](https://your-live-link-here.com)
+[🔗 View Live](https://zaidofficial.github.io/Internship-task-9/)
 
 ---
 
