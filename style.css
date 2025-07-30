@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f7f7f7;
+    padding: 20px;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+}
+
+.header p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px 15px 5px;
+}
+
+.card p {
+    padding: 0 15px 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.card a {
+    display: inline-block;
+    margin: 10px 15px 15px;
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.card a:hover {
+    background: #0056b3;
+}
+
+.scroll-btn {
+    position: fixed;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Top-Left Corner */
+.top-to-bottom {
+    top: 20px;
+    left: 20px;
+}
+
+/* Bottom-Right Corner */
+.bottom-to-top {
+    bottom: 20px;
+    right: 20px;
+}
+
+.scroll-btn:hover {
+    background: #0056b3;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Default (large desktop) - 4 cards */
+.gallery {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Desktop (3 cards) */
+@media (max-width: 1200px) {
+    .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet (2 cards) */
+@media (max-width: 768px) {
+    .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (1 card) */
+@media (max-width: 480px) {
+    .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
